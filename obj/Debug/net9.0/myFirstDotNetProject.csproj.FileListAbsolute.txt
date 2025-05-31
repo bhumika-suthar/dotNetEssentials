@@ -29,3 +29,4 @@ D:\aspDotNetCoreEssentials\myFirstDotNetProject\obj\Debug\net9.0\ref\myFirstDotN
 D:\aspDotNetCoreEssentials\myFirstDotNetProject\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\aspDotNetCoreEssentials\myFirstDotNetProject\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\aspDotNetCoreEssentials\myFirstDotNetProject\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\aspDotNetCoreEssentials\myFirstDotNetProject\obj\Debug\net9.0\myFirstDotNetProject.sourcelink.json

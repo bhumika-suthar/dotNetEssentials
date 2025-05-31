@@ -45,15 +45,27 @@ app.MapPost("/giveName", (NameRequest request) =>
 });
 app.MapPost("/removeName", (NameRequest request) =>
 {
-    if (string.IsNullOrEmpty(request.Name))
+    var found = names.FirstOrDefault(n =>
+    string.Equals(n, request.Name, StringComparison.OrdinalIgnoreCase));
+
+    if (found == null)
     {
-        return Results.BadRequest("Name is empty");
+        return Results.NotFound($"Name '{request.Name}' not found");
     }
-    names.Remove(request.Name);
+
+    names.Remove(found);
     return Results.Ok($"The name {request.Name} has been removed");
 
 
 });
+app.MapGet("/nameOnIndex/{index:int}", (int index) =>
+    {
+        if (index < 0 || index >= names.Count)
+        {
+            return Results.NotFound($"Index {index} is out of range");
+        }
+        return Results.Ok(names[index]);
+    });
 
 app.Run();
 
